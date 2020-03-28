@@ -26,7 +26,7 @@ func main() {
 			fmt.Printf("%s (custom: %s)\n", err.Error(), er)
 			os.Exit(1)
 		}
-		sum = sum + n
+		sum += n
 	}
 	var k float64 = (float64) ((len(args) - 1))
 	var avg float64 = sum / k

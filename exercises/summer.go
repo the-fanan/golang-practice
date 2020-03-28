@@ -26,7 +26,7 @@ func main() {
 			fmt.Printf("%s (custom: %s)\n", err.Error(), er)
 			os.Exit(1)
 		}
-		sum = sum + n
+		sum += n
 	}
 
 	fmt.Printf("Sum of all numbers is: %f \n", sum)
