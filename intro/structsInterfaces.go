@@ -32,7 +32,7 @@ func totalArea(shapes ...Shape) float64 {
 	}
 	return area
 }
-//embeded types
+
 type MultiShape struct {
 	shapes []Shape
 }
@@ -44,7 +44,24 @@ func (m *MultiShape) area() float64 {
 	return area
 }
 
+/**
+	* Embedded types
+*/
+type Person struct {
+	Name string //capital letters for public parameters
+}
+func (p *Person) Talk() {
+	fmt.Println("Hi, my name is ", p.Name)
+}
+
+type Android struct {
+	Person //Android inherits all properties of Person
+}
+
 func main() {
+	a := new(Android)
+	a.Person.Name = "Fanan"
+	a.Talk()
 	var c Circle 
 	d := new(Circle)//returns a pointer to the struct -- uncommon convention
 	e := Circle{x: 0, y: 0, r: 3}
