@@ -65,8 +65,7 @@ func main() {
 	fmt.Println(sc())
 
 	countDown(5)
-
-	pP := 3
+	pP := 0
 	mP := new(int)
 	fmt.Println(pointerHandler(&pP, mP))
 	//using defer to recover from runtime error
