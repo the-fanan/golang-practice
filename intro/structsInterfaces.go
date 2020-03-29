@@ -55,14 +55,19 @@ func (p *Person) Talk() {
 }
 
 type Android struct {
-	Person //Android inherits all properties of Person
+	Person//Android inherits all properties of Person
 }
 
 func main() {
 	a := new(Android)
 	a.Person.Name = "Fanan"
 	a.Talk()
+
 	var c Circle 
+	c.x = 3
+	c.y = 5
+	c.r = 9
+	fmt.Println(c, c.area())
 	d := new(Circle)//returns a pointer to the struct -- uncommon convention
 	e := Circle{x: 0, y: 0, r: 3}
 	f := Circle{0, 0, 2}//assigns values in order in chich they are defined in the struct
