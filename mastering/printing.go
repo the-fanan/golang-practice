@@ -16,4 +16,11 @@ func main() {
 
 	fmt.Println(v1, v2, v3, v4)
 	fmt.Printf("%s %d '%s' %s\n", v1, v2, v3, v4)
+	fmt.Println(`
+		This
+		is
+		a
+		multiline
+		Print
+	`)
 }
