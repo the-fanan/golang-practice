@@ -90,6 +90,6 @@ func main() {
 	callSayName(&g)
 	callSayName(f)
 	//this is because the definition for sayName requires a pointer to struct Extender to be passed
-	//confusing, that if the function is defined to passed by value and a reference is passed, it still works. Why? Because in Go, even pointers are passed by value. So, where a value is needed and a pointer is passed, the pointer is DEREFFERENCED
+	//confusing, that if the function is defined to be passed by value and a reference is passed, it still works. Why? Because in Go, even pointers are passed by value. So, where a value is needed and a pointer is passed, the pointer is DEREFFERENCED -- for structs
 	//when it passes by value insead of reference, update functions do not work
 }
