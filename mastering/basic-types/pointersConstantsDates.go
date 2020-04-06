@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 /**
 	*type VARIABLE_NAME DATA_TYPE -- is a way of defining a new named type that uses the same
@@ -43,9 +44,20 @@ func main() {
 	v := 7
 	n := new(int)//create a pointer to an int
 	n = &v
-	t := &v //t is assigned a pointer to v
-	fmt.Println(t, n)//notice that t and n are memory addresses
-	fmt.Println(*t, *n)//* -- access the actual value the pointer points to
+	p := &v //t is assigned a pointer to v
+	fmt.Println(p, n)//notice that t and n are memory addresses
+	fmt.Println(*p, *n)//* -- access the actual value the pointer points to
 	*n = 9 // change the value of what n points to
-	fmt.Println(v,*n,*t)
+	fmt.Println(v,*n,*p)
+
+	/**
+		* Dealing with Time & Dates
+	*/
+	fmt.Println("Epoch time:", time.Now().Unix())
+	t := time.Now()
+	fmt.Println(t, t.Format(time.RFC3339))
+	fmt.Println(t.Weekday(), t.Day(), t.Month(), t.Year())
+	time.Sleep(time.Second)//time.Nanosecond , time.Microsecond , time.Millisecond , time.Minute , time.Hour
+	t1 := time.Now()
+	fmt.Println("Time difference:", t1.Sub(t))
 }
