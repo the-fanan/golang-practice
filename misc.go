@@ -4,6 +4,9 @@ import(
 	"fmt"
 )
 
+/**
+	* This file is just for me to try out stuff
+*/
 func mergeSort(a *[]int, ta *[]int, l int, r int) int{
 	if l == r {
 		return l
