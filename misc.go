@@ -51,9 +51,23 @@ func merger(a *[]int, ta *[]int, l int, r int, e int) {
 	}
 }
 
+func countTo1000(n chan int) {
+	for i := 0; i < 1000; i++ {
+		fmt.Println(i)
+		n <- 1
+	}
+}
+
 func main() {
+	n := make(chan int, 1000);
 	a := []int{4,1,-1,4,7,-3,9}
 	t := make([]int, len(a))	
 	mergeSort(&a, &t, 0, len(a) - 1)
 	fmt.Println(a)
+	go countTo1000(n)
+	sum := 0
+	for i := 0; i < 1000; i += <- n {
+		sum += 1
+	}
+	fmt.Println("sum: ", sum)
 }
