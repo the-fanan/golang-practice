@@ -7,7 +7,7 @@ import (
 
 func Waiting() {
 	var waitGroup sync.WaitGroup
-	fmt.Printf("%#v\n", waitGroup)
+	fmt.Printf("%#v\n", &waitGroup)
 	for i := 0; i < 10; i++ {
 		waitGroup.Add(1)
 		go func(x int) {
@@ -15,7 +15,7 @@ func Waiting() {
 			fmt.Printf("%d ", x)
 		}(i)
 	}
-	fmt.Printf("%#v\n", waitGroup)
+	fmt.Printf("%#v\n", &waitGroup)
 	waitGroup.Wait()
 	//This allows the program to wait for routines to be completed but still does not ensure order
 
