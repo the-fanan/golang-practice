@@ -45,3 +45,11 @@ func Third(in <-chan int) {
 	}
 	fmt.Printf("The sum of the random numbers is %d\n", sum)
 }
+
+/**
+unbufferred channels were used for this pipeline.
+Unbuffered channels are used for synchronous communication while buffered channelsare used for asynchronous communication.
+An unbuffered channel will block function from continuing execution until it is read or written to. A buffered channel does not block function from continuing execution.
+
+Both types of channels will however prevent a function from closing until they are closed
+*/
