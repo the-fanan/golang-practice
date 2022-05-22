@@ -27,7 +27,7 @@ For counting number of rectangles a corner forms,
 
 
 Time Complexity O((N*M)^2) worst case when every cell is a CORNER
-Space Complexity O(N*M) worst case depth of stack when every cell is a CORNER
+Space Complexity O(N+M) worst case depth of stack when every cell is a CORNER.
 **/
 const RIGHT string = "right"
 const DOWN string = "down"
