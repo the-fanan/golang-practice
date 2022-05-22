@@ -47,3 +47,5 @@ func sendUpdateCount(s string, c chan rune) {
 	}
 
 }
+
+
